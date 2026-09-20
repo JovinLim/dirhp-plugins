@@ -1,0 +1,15 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "dirhp-marketplace",
+  "owner": { "name": "dirhp" },
+  "metadata": {
+    "description": "dirhp: spatial-semantic reasoning tools and modeling playbooks for Rhino, with in-Rhino human-in-the-loop prompts."
+  },
+  "plugins": [
+    {
+      "name": "dirhp",
+      "source": "./",
+      "description": "dirhp skill bridge — spatial-semantic tools, modeling playbooks, and in-Rhino prompts."
+    }
+  ]
+}

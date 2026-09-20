@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Options and Snapshots"
+  short_description: "Manage history and dependency-safe recipes"
+  default_prompt: "Use $di-options-and-snapshots to manage this design history and recipe run."
+policy:
+  allow_implicit_invocation: true

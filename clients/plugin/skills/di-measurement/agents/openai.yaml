@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Measurement"
+  short_description: "Measure graph geometry and references"
+  default_prompt: "Use $di-measurement to obtain and qualify this design measurement."
+policy:
+  allow_implicit_invocation: true

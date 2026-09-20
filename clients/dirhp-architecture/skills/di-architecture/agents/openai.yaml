@@ -1,0 +1,4 @@
+interface:
+  display_name: "DI Architecture"
+  short_description: "Create, edit, and review architectural designs"
+  default_prompt: "Use $di-architecture to interpret this brief through DI requirements, spaces, relations, and suitable representations."

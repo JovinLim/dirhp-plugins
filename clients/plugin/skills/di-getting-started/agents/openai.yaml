@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Getting Started"
+  short_description: "Understand and navigate DI design records"
+  default_prompt: "Use $di-getting-started to understand this design in DI and choose relevant records and tools."
+policy:
+  allow_implicit_invocation: true

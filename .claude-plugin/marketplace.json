@@ -1,0 +1,22 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "dirhp-marketplace",
+  "owner": {
+    "name": "dirhp"
+  },
+  "metadata": {
+    "description": "dirhp: spatial-semantic reasoning tools and modeling playbooks for Rhino, with in-Rhino human-in-the-loop prompts."
+  },
+  "plugins": [
+    {
+      "name": "dirhp",
+      "source": "./clients/plugin",
+      "description": "dirhp skill bridge — spatial-semantic tools, modeling playbooks, and in-Rhino prompts."
+    },
+    {
+      "name": "dirhp-architecture",
+      "source": "./clients/dirhp-architecture",
+      "description": "Architecture workflows for DI: briefs, component systems, geometric evaluation, and option comparison. Requires the base dirhp plugin."
+    }
+  ]
+}

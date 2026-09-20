@@ -1,0 +1,4 @@
+interface:
+  display_name: "DI Architectural Evaluation"
+  short_description: "Check geometry against architectural criteria"
+  default_prompt: "Use $di-architecture-evaluation to check these column spacings."

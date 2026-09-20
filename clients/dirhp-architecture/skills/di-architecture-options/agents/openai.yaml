@@ -1,0 +1,4 @@
+interface:
+  display_name: "DI Architectural Options"
+  short_description: "Compare architectural alternatives with evidence"
+  default_prompt: "Use $di-architecture-options to compare these two massing options."

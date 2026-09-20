@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Troubleshooting"
+  short_description: "Diagnose DI connection and runtime issues"
+  default_prompt: "Use $di-troubleshooting to diagnose this DI issue."
+policy:
+  allow_implicit_invocation: true

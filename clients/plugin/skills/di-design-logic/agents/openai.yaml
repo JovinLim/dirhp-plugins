@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Design Logic"
+  short_description: "Choose direct authoring, recipes, or policies"
+  default_prompt: "Use $di-design-logic to turn this designer rule into the right authoring workflow."
+policy:
+  allow_implicit_invocation: true

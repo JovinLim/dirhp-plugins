@@ -1,0 +1,4 @@
+interface:
+  display_name: "DI Architectural Systems"
+  short_description: "Compose architectural components and datums"
+  default_prompt: "Use $di-architecture-systems to make this facade bay reusable."

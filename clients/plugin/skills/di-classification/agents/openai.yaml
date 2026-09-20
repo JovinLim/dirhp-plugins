@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Classification"
+  short_description: "Group congruent geometry with review"
+  default_prompt: "Use $di-classification to group these geometrically matching objects."
+policy:
+  allow_implicit_invocation: true

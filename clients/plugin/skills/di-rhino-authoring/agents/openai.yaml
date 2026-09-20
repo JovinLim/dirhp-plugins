@@ -1,0 +1,4 @@
+interface:
+  display_name: "DI Rhino Authoring"
+  short_description: "Create, edit, and adopt Rhino geometry"
+  default_prompt: "Use $di-rhino-authoring to create and adopt Rhino geometry, choosing a recipe when regeneration is needed."

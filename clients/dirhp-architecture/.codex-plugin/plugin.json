@@ -1,0 +1,18 @@
+{
+  "name": "dirhp-architecture",
+  "version": "0.1.0",
+  "description": "Architecture workflows for DI: briefs, component systems, geometric evaluation, and option comparison. Requires the base dirhp plugin.",
+  "author": {
+    "name": "DI"
+  },
+  "skills": "./skills/",
+  "interface": {
+    "displayName": "DI Architecture",
+    "shortDescription": "Architecture workflows for the base DI plugin.",
+    "longDescription": "Apply architectural briefs, compose component systems, evaluate geometric evidence, and compare design options through the existing DI connection. Install alongside dirhp.",
+    "developerName": "DI",
+    "category": "Productivity",
+    "capabilities": [],
+    "defaultPrompt": "Use $di-architecture to develop this architectural brief with DI."
+  }
+}

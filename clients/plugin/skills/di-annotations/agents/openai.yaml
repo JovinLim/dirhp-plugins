@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Annotations"
+  short_description: "Dimension and label a design durably"
+  default_prompt: "Use $di-annotations to dimension or label this design so it rebuilds with it."
+policy:
+  allow_implicit_invocation: true

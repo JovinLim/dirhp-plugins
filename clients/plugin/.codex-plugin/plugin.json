@@ -1,0 +1,35 @@
+{
+  "name": "dirhp",
+  "version": "0.1.1",
+  "description": "dirhp (DI) skill bridge for spatial-semantic reasoning over live Rhino documents.",
+  "author": {
+    "name": "DI"
+  },
+  "keywords": [
+    "rhino",
+    "architecture",
+    "mcp",
+    "spatial",
+    "design-intelligence"
+  ],
+  "skills": "./skills/",
+  "mcpServers": "./.mcp.json",
+  "interface": {
+    "displayName": "dirhp",
+    "shortDescription": "Spatial-semantic DI tools and Rhino playbooks.",
+    "longDescription": "Connects Codex to a running dirhp backend, exposing DI spatial-semantic reasoning tools, modeling playbooks, and in-Rhino human-in-the-loop prompts over MCP.",
+    "developerName": "DI",
+    "category": "Productivity",
+    "capabilities": [
+      "Interactive",
+      "MCP",
+      "Design"
+    ],
+    "defaultPrompt": [
+      "List active DI Rhino sessions.",
+      "Help me inspect this Rhino model.",
+      "Have me select an object in Rhino."
+    ],
+    "brandColor": "#2563EB"
+  }
+}

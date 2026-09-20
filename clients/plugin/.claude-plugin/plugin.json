@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-plugin-manifest.json",
+  "name": "dirhp",
+  "displayName": "dirhp plugin",
+  "version": "0.1.1",
+  "description": "dirhp (DI) skill bridge: spatial-semantic reasoning tools and modeling playbooks over a live Rhino document, plus human-in-the-loop prompts (text input, object selection) in Rhino.",
+  "author": { "name": "DI" },
+  "keywords": ["rhino", "architecture", "mcp", "spatial", "design-intelligence"]
+}

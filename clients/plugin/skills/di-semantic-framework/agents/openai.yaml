@@ -1,0 +1,6 @@
+interface:
+  display_name: "DI Semantic Framework"
+  short_description: "Author intents, relations, and representations"
+  default_prompt: "Use $di-semantic-framework to author and resolve this design intent safely."
+policy:
+  allow_implicit_invocation: true

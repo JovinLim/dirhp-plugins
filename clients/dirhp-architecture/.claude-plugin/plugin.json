@@ -1,0 +1,7 @@
+{
+  "name": "dirhp-architecture",
+  "version": "0.1.0",
+  "description": "Architecture workflows for DI: briefs, component systems, geometric evaluation, and option comparison. Requires the base dirhp plugin.",
+  "author": { "name": "DI" },
+  "keywords": ["architecture", "rhino", "design-intelligence", "skills"]
+}

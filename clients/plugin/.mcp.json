@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "dirhp": {
+      "type": "http",
+      "url": "https://si-pw0nh1ll.tail0da0b2.ts.net/mcp/"
+    }
+  }
+}
