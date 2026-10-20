@@ -7,7 +7,7 @@ You need three things, in this order:
 
 1. An account token (`dirhp_…`), sent to you separately.
 2. The **dirhp** plugin from this repo (skills + MCP connector).
-3. The Rhino plugin zip, also sent separately — it is not in this repository.
+3. The Rhino plugin package, `dirhp.yak` — it is not in this repository.
 
 ## Claude Code
 
@@ -52,27 +52,26 @@ Requires ChatGPT Plus, Pro, Business, Enterprise, or Edu.
 
 ## Rhino
 
-Unzip `DI.Rhino-<version>.zip`. In Rhino 8, `_PlugInManager` → **Install…** → the `.rhp` **inside
-the unzipped folder**. Leave the sibling DLLs and `runtimes/` next to it; a lone `.rhp` will load
-and then fail on the first viewport capture.
+Drag `dirhp.yak` into Rhino 8 to install it.
 
 The backend URL is already baked in. Do not set `DI_API_URL`.
 
-Then, once per machine:
+Then sign in:
 
-1. Authenticate the chat client first (above). Enrollment needs an account to attach to.
-2. In Rhino, run `DI_Enroll`. It prints a code, good for five minutes.
-3. Paste that code to the agent (`di_connect`).
-4. `DI_Connect` (or `DI_Open` for the viewer too) to pair a document.
+1. In Rhino, run the `dirhp_Panel` command.
+2. Click **Login** and paste your account token (`dirhp_…`) when the panel asks for the dirhp
+   account token.
 
-The device token is stored in Rhino's plugin settings and survives restarts.
+[IMAGE: dirhp panel showing the Login button and the account token prompt]
+
+To open the web viewer, run `dirhp_Web` or click **Open dirhp web** in the panel.
 
 ## Packs
 
 | Pack | What |
 |---|---|
 | **dirhp** | Skills and the MCP connector. Install this. |
-| **dirhp-architecture** | Briefs, component systems, geometric evaluation, option comparison. Optional; requires **dirhp**. |
+| **dirhp-architecture** | Briefs, component systems, geometric evaluation, option studies. Optional; requires **dirhp**. |
 
 Enable only one dirhp connection plugin per session.
 
@@ -81,9 +80,8 @@ Enable only one dirhp connection plugin per session.
 - **Skills but no tools** — the plugin installed, the connector did not. The backend at the URL
   inside the plugin has to be reachable. Ask for a republish, then update the marketplace. Do not
   add a duplicate custom connector.
-- **Rhino says it is not enrolled** — `DI_Enroll` again, paste the new code. Codes expire and work
-  once.
-- **"That enrollment code is unknown or expired"** — request a fresh one.
+- **Rhino says it is not signed in** — run `dirhp_Panel`, click **Login**, and paste the account
+  token again.
 - **Asked to authorize again** — normal after a backend restart; paste the account token.
 - **Lost the account token** — it cannot be recovered. Ask for a new one; the old one should be
   revoked.

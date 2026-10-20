@@ -9,7 +9,7 @@ Request: “Compare the compact block and the stepped block against this brief. 
    declared representations. Keep source components and repeated occurrences distinct.
 4. Evaluate height and boundary distance with the agreed operands and frame. If only outer masses
    exist, report floor area as unresolved; bounding boxes do not establish floor plates.
-5. Read a bounded change summary and inspect the differences that explain the measured trade-offs.
+5. Load both versions side by side and inspect the differences that explain the measured trade-offs.
    Use consistent visual views for form. Do not infer daylight performance from a screenshot.
 6. Present the result with method and fidelity. Explain which criteria each option meets, where
    evidence is absent, and what further model content would resolve it. Leave the model unchanged.

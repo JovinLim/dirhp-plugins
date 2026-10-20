@@ -13,7 +13,7 @@ comparison, and restore contracts. Use `di-architecture-evaluation` for geometri
 ## Make the comparison meaningful
 
 Identify the baseline and decision criteria from the brief. For a requested new direction, fork
-the intended saved state so the source stays available. Name the option with the user's label and
+the intended saved version so the source stays available. Name the option with the user's label and
 a factual strategy, such as “B — Narrow courtyard massing.” Do not claim an unmeasured benefit in
 its name or description.
 
@@ -22,9 +22,9 @@ geometry. If these differ, report that difference before attributing results to 
 Side-by-side document placement is presentation; compare normalized design geometry or a common
 datum so the display offset does not become a design difference.
 
-Use `di_compare_design_states` for the geometric and semantic change census, then inspect only the
-changes relevant to the brief. Match comparable systems through authored scope and source ownership;
-do not assume separately created alternatives share object IDs. A change count alone is not a
+dirhp does not diff versions. Load the versions side by side in Rhino (`di_load_snapshot`) and
+inspect only what is relevant to the brief. Match comparable systems through authored scope and source ownership;
+do not assume separately created alternatives share object IDs. A visual difference alone is not a
 performance comparison.
 
 ## Explain trade-offs
@@ -40,7 +40,7 @@ creating history just for inspection.
 
 ## Handoff
 
-State the options and design states compared, the decision supported, and any outstanding evidence.
+State the options and versions compared, the decision supported, and any outstanding evidence.
 If the user selects a direction, save within existing authorization and record a short factual
 note. A study-only request ends with the comparison. Do not delete the other alternatives.
 

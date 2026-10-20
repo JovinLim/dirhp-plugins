@@ -16,7 +16,7 @@
     {
       "name": "dirhp-architecture",
       "source": "./clients/dirhp-architecture",
-      "description": "Architecture workflows for DI: briefs, component systems, geometric evaluation, and option comparison. Requires the base dirhp plugin."
+      "description": "Architecture workflows for DI: briefs, component systems, geometric evaluation, and option studies. Requires the base dirhp plugin."
     }
   ]
 }
