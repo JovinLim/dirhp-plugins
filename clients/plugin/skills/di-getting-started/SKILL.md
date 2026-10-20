@@ -13,7 +13,7 @@ them in the intended design state instead of reconstructing context from earlier
 - **Relation:** supported connection, e.g. membership, containment, boundary.
 - **Representation:** geometry declared to display/measure an element.
 - **Rhino object:** document geometry; ownership requires adoption or declared recipe output.
-- **Option / staging / snapshot:** design context / editable state / exact saved state.
+- **Option / staging / snapshot:** design context / editable state / exact saved version (snapshot).
 - **Cache:** bounded session record of captured objects; neither ownership nor saved memory.
 
 Kitchen intent + target-width property + footprint representation + related partitions are
@@ -36,7 +36,7 @@ Relations record connections; recipes/policies provide explicit automation, not 
 ## State and navigation
 
 Live: `di_connect` connects and orients; reuse `session_id` or auto-activate the sole present document.
-Absent/ambiguous document: ask for its `DI_Connect` code; use `di_connect(code=...)`.
+Absent/ambiguous document: ask the user to open the dirhp panel (`dirhp_Panel`) in that document and click Login, then `di_connect`.
 Reuse returned orientation; `orient_me` refreshes it when needed.
 
 Saved: `di_list_workspaces`, `di_get_workspace`, `di_find_options`; `scope.snapshot_id` selects exact

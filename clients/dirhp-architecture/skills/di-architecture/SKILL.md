@@ -14,7 +14,7 @@ judgement. Without DI evidence, continue only independent work; do not invent me
   distinguish requirements, proposed assumptions, and observed conditions.
 - Space identity/function: intent; class/layer alone does not prove function.
 - Dimensions: document units + datum + target/assumed/measured status. Measurement also needs
-  geometry and live/saved state. Floor top elevation, thickness, and height above it differ.
+  geometry and live/saved version. Floor top elevation, thickness, and height above it differ.
 - Relations: navigate relevant members, containers, boundaries; check supported contracts.
 - Representation: a footprint can express proposed extent without a physical floor. Construction
   or clearance questions may require faces/solids. Existing walls or proposed intents can be the

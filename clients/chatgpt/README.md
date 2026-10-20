@@ -34,8 +34,8 @@ routing pinned in a Project as well, paste this:
 ```
 This project talks to a live Rhino document through the dirhp connector.
 
-Start with di_connect. If several documents are present, ask me to run DI_Connect in Rhino and give
-you the pairing code. Then call orient_me.
+Start with di_connect. If several documents are present, ask me to open the dirhp panel (dirhp_Panel) in
+the one to use and click Login. Then call orient_me.
 
 Before authoring, measuring, annotating, or composing a recipe or policy, call di_list_guides and
 read the relevant guide with di_get_guide — the conventions, refusal codes and safety gates live

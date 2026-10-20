@@ -15,16 +15,15 @@ error; do not save merely to make a read possible. For a saved-graph freshness r
 the requested scope and returned fix; save only within the user’s authorized workflow.
 `Rhino rejected` / `RunScript returned false` → surface error; re-pair won't help.
 
-**Not enrolled** is a different failure: Rhino reports it is not linked to a dirhp account, or its
-sockets report an auth rejection. Re-pairing cannot fix it — that machine holds no credential the
-backend accepts. Have the user run **DI_Connect** (or **DI_Enroll**), then redeem the printed
-enrollment code with `di_connect(code=...)`. Once per machine; then continue with the same connect
-flow below.
+**Not signed in** is a different failure: Rhino reports it is not linked to a dirhp account, or its
+sockets report an auth rejection. Reconnecting cannot fix it — that machine holds no credential the
+backend accepts. Have the user open the dirhp panel in Rhino (`dirhp_Panel`), click **Login**, and
+paste their `dirhp_` account token. Then continue with the reconnect flow below.
 
-1. User runs **DI_Connect** in the target document and pastes its one code.
-2. `di_connect(code=...)`. If `pending`, wait and retry the same code.
+1. User opens the dirhp panel in the target document (`dirhp_Panel`) and clicks **Login**.
+2. `di_connect`. If `pending`, wait and retry.
 3. Reuse returned `session_id`; retry the failed call.
-4. Still failing after successful re-pair → stop looping; surface the error.
+4. Still failing after a successful reconnect → stop looping; surface the error.
 
 **Done:** failed call succeeds after re-pair with the same durable session when the document matches.
 

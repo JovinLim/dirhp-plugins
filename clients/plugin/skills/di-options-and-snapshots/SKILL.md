@@ -93,7 +93,7 @@ values exist only while the run's fingerprints still match, so never quote stale
 current. Run responses are compact: pull outputs and transcripts from the `output` and `run_log`
 views rather than expecting them inline.
 
-Use `di_compare_design_states` and history summaries for change. Load absent saved geometry; use graph
+dirhp does not diff versions; to compare, load them side by side with `di_load_snapshot`. Load absent saved geometry; use graph
 references or snapshot placement for read-only composition. To put one loaded occurrence onto
 another snapshot of the same option without creating a duplicate, call
 `di_update_loaded_snapshot`. Additive `di_load_snapshot` remains the way to keep two versions
