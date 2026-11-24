@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Troubleshooting"
+  short_description: "Diagnose dirhp connection and runtime issues"
+  default_prompt: "Use $dirhp-troubleshooting to diagnose this dirhp issue."
+policy:
+  allow_implicit_invocation: true

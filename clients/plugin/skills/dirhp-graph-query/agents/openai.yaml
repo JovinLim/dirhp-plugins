@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Graph Query"
+  short_description: "Find, count, and relate design records with SQL"
+  default_prompt: "Use $dirhp-graph-query to answer what is in this design with dirhp_query."
+policy:
+  allow_implicit_invocation: true

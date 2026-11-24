@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Geometry Authoring"
+  short_description: "Create, edit, and adopt Rhino geometry in dirhp"
+  default_prompt: "Use $dirhp-geometry-authoring to create, edit, and adopt Rhino geometry in dirhp."
+policy:
+  allow_implicit_invocation: true

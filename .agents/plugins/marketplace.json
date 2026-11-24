@@ -1,0 +1,20 @@
+{
+  "name": "dirhp-marketplace",
+  "interface": {
+    "displayName": "dirhp"
+  },
+  "plugins": [
+    {
+      "name": "dirhp",
+      "source": {
+        "source": "local",
+        "path": "./clients/plugin"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

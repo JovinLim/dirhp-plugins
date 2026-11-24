@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Options and Versions"
+  short_description: "Manage design options and saved history"
+  default_prompt: "Use $dirhp-options-and-versions to manage the options and saved states for this design."
+policy:
+  allow_implicit_invocation: true

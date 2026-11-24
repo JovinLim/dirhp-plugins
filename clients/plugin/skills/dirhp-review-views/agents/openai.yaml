@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Review Views"
+  short_description: "Capture images and manage review views"
+  default_prompt: "Use $dirhp-review-views to create and inspect a review image of this design."
+policy:
+  allow_implicit_invocation: true

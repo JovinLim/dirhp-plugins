@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Design Composition"
+  short_description: "Place and update nested design components"
+  default_prompt: "Use $dirhp-design-composition to compose these saved components in the target option."
+policy:
+  allow_implicit_invocation: true

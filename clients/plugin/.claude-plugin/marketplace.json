@@ -8,6 +8,7 @@
   "plugins": [
     {
       "name": "dirhp",
+      "license": "LicenseRef-Proprietary",
       "source": "./",
       "description": "dirhp skill bridge — spatial-semantic tools, modeling playbooks, and in-Rhino prompts."
     }

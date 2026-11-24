@@ -1,0 +1,6 @@
+interface:
+  display_name: "dirhp Semantic Framework"
+  short_description: "Author intents, relations, and representations"
+  default_prompt: "Use $dirhp-semantic-framework to author intents, relations, and representations."
+policy:
+  allow_implicit_invocation: true
