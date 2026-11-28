@@ -1,6 +1,6 @@
 ---
 name: dirhp-options-and-versions
-description: Create and focus dirhp options; save, load, tag, restore, and compare design states. Use for stored state and history.
+description: Create and focus dirhp options; save, load, tag, restore, and compare design states, including Grasshopper definitions, their options and versions. Use for stored state and history.
 ---
 
 # Manage options and versions
@@ -26,7 +26,14 @@ the default authoring target. Unsaved edits stay until Update or a save. Any doc
    - Compare state/history: `dirhp_compare_design_states`; identify exact versions or staging. To show the designer what changed, `dirhp_show_design_changes` draws added, changed and removed objects in the Rhino viewport (display only; `clear` removes it).
    - List history / see who has it loaded: `dirhp_list_versions` (option or design, tagged or not); `dirhp_list_loaded_versions` (where, unsaved?, connected?; not what changed). Both session-free, read-only.
    - Generator behind a version's objects: `dirhp_list_version_generators`, then `dirhp_open_version_generator(version_id, artifact_sha)` (opens in Grasshopper with the solver locked; the person confirms in Rhino).
-   - Grasshopper definition (its own versioned part, not an option): `dirhp_read_grasshopper_canvas`, `dirhp_save_definition`, `dirhp_list_definition_versions`, `dirhp_compare_definition_versions` (category `grasshopper`); guide `grasshopper-definitions`. `dirhp_save_definition` takes a required `message` too; a first save also needs `new_definition_name`, the name the designer types (never the file name; `name_required`). Definition names are unique per workspace and copy names across the workspace's definitions, ignoring case (`definition_name_exists`, `option_name_exists`); rename with `dirhp_rename_definition` / `dirhp_rename_definition_option` only when asked. `new_option_name` saves the document as a new copy: an ordinary save (`dirhp_invoke`), only when asked; only `force` is destructive. `definition_advanced`: the designer chooses.
+   - Grasshopper definition (its own versioned part, not an option; category `grasshopper`; guide `grasshopper-definitions`). By task:
+     - Find/read: `dirhp_list_definitions` (saved), `dirhp_list_grasshopper_documents` (open), `dirhp_read_grasshopper_canvas`; `dirhp_activate_grasshopper_document` and `dirhp_highlight_grasshopper_nodes` move the designer's canvas, so only when asked.
+     - Save/history: `dirhp_save_definition`, `dirhp_list_definition_versions`, `dirhp_compare_definition_versions`; `dirhp_show_grasshopper_changes` / `dirhp_clear_grasshopper_changes` display only.
+     - Open/switch: `dirhp_open_definition_version`, `dirhp_switch_definition_version` (the person confirms in Rhino).
+     - Options: `dirhp_list_definition_options`, `dirhp_create_definition_option`.
+     - Merge: `dirhp_review_definition_merge`, then `dirhp_open_definition_merge` (always destructive gateway).
+     - Delete: `dirhp_delete_definition`, `dirhp_delete_definition_option`, `dirhp_delete_definition_version` (always destructive gateway).
+     - `dirhp_save_definition` takes a required `message`; a first save also needs `new_definition_name`, the name the designer types (never the file name; `name_required`). Definition names are unique per workspace and copy names across the workspace's definitions, ignoring case (`definition_name_exists`, `option_name_exists`); rename with `dirhp_rename_definition` / `dirhp_rename_definition_option` only when asked. `new_option_name` saves the document as a new copy: an ordinary save (`dirhp_invoke`), only when asked; only `force` is destructive. `definition_advanced`: the designer chooses.
    - Merge one option into another of the same design: `dirhp_review_option_merge(source_option_id, target_option_id)`, show the items with both options' names, then `dirhp_apply_option_merge` with the designer's `target`/`source` choices through `dirhp_invoke_destructive`. It needs a copy of the target loaded, at its latest save, with no unsaved edits; the result is unsaved in that copy (one Ctrl+Z) until `dirhp_save_version`, only when asked. Guide `options-and-versions`, "Merge one option into another".
    - Save/tag: read [save and tags](references/save-and-tags.md), then `dirhp_save_version`
      or `dirhp_tag_version` only when requested or already authorized. `option_advanced`: the
