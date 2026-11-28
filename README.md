@@ -1,89 +1,51 @@
 # dirhp-plugins
 
-Install target for dirhp client packs. This is not the product source: it holds only what a
-chat client needs to connect to a hosted dirhp backend.
+Public install source for the dirhp assistant plugin. It holds only the skills and the MCP
+connector config. It is not the product source.
 
-You need three things, in this order:
+dirhp lets Claude, ChatGPT and Codex read and edit Rhino 8 models. You need two parts: the dirhp
+Rhino plugin, and the dirhp assistant plugin from this repo.
 
-1. An account token (`dirhp_…`), sent to you separately.
-2. The **dirhp** plugin from this repo (skills + MCP connector).
-3. The Rhino plugin zip, also sent separately — it is not in this repository.
+## Plugin
 
-## Claude Code
+| Marketplace | Plugin |
+|---|---|
+| `dirhp-marketplace` | `dirhp` |
+
+The connector points at one server, `https://api.dirhp.io/mcp/`. See
+[clients/plugin/README.md](clients/plugin/README.md) for what the plugin runs, sends and fetches.
+
+## Sign-in
+
+On first connect a browser window opens for OAuth. Sign in with your dirhp email and password.
+There is no token to paste. Create an account at https://dirhp.io/get-started.
+
+## Install the Rhino plugin
+
+Requires Rhino 8 on Windows or Mac.
+
+1. Open Rhino 8, then Tools > Package Manager (or run `PackageManager`).
+2. Search for `dirhp`, select it, then select Install.
+3. Restart Rhino. In the dirhp panel choose Sign in with browser.
+
+## Install the assistant plugin
+
+Claude Code:
 
 ```bash
 claude plugin marketplace add JovinLim/dirhp-plugins
 claude plugin install dirhp@dirhp-marketplace
-claude plugin install dirhp-architecture@dirhp-marketplace
 ```
 
-Start a new session. Send the account token as `Authorization: Bearer dirhp_…` in the MCP headers.
+Start `claude`, run `/mcp`, select `dirhp` and choose Authenticate.
 
-## Claude Desktop
+Claude Desktop, claude.ai, Codex and the ChatGPT desktop app: follow the steps at
+https://dirhp.io/help (Get started, Connect your own AI app). They use a `dirhp.zip` download.
 
-1. Customize → Plugins → **+** → Add marketplace → Add from a repository.
-2. Enter `https://github.com/JovinLim/dirhp-plugins`.
-3. Install **dirhp**. Optionally install **dirhp-architecture** (it needs the base plugin).
-4. Start a new session.
+## Links
 
-The first DI tool opens a consent page. Paste the account token there. Do not add a second custom
-connector — the plugin already is one.
-
-To pick up a published update, select **Update** on this marketplace and start a new session.
-
-## Codex
-
-```bash
-codex plugin marketplace add JovinLim/dirhp-plugins
-codex plugin add dirhp@dirhp-marketplace
-codex plugin add dirhp-architecture@dirhp-marketplace
-```
-
-In the app: Settings → Plugins → **+ Add More…** → `https://github.com/JovinLim/dirhp-plugins`.
-Send the account token as `Authorization: Bearer dirhp_…` in the MCP headers.
-
-## ChatGPT
-
-ChatGPT cannot install skills. Settings → Connectors → Advanced → Developer mode, then create a
-custom connector with the `/mcp/` URL you were given. Authenticate on the consent page with the
-same account token.
-
-Requires ChatGPT Plus, Pro, Business, Enterprise, or Edu.
-
-## Rhino
-
-Unzip `DI.Rhino-<version>.zip`. In Rhino 8, `_PlugInManager` → **Install…** → the `.rhp` **inside
-the unzipped folder**. Leave the sibling DLLs and `runtimes/` next to it; a lone `.rhp` will load
-and then fail on the first viewport capture.
-
-The backend URL is already baked in. Do not set `DI_API_URL`.
-
-Then, once per machine:
-
-1. Authenticate the chat client first (above). Enrollment needs an account to attach to.
-2. In Rhino, run `DI_Enroll`. It prints a code, good for five minutes.
-3. Paste that code to the agent (`di_connect`).
-4. `DI_Connect` (or `DI_Open` for the viewer too) to pair a document.
-
-The device token is stored in Rhino's plugin settings and survives restarts.
-
-## Packs
-
-| Pack | What |
-|---|---|
-| **dirhp** | Skills and the MCP connector. Install this. |
-| **dirhp-architecture** | Briefs, component systems, geometric evaluation, option comparison. Optional; requires **dirhp**. |
-
-Enable only one dirhp connection plugin per session.
-
-## If something goes wrong
-
-- **Skills but no tools** — the plugin installed, the connector did not. The backend at the URL
-  inside the plugin has to be reachable. Ask for a republish, then update the marketplace. Do not
-  add a duplicate custom connector.
-- **Rhino says it is not enrolled** — `DI_Enroll` again, paste the new code. Codes expire and work
-  once.
-- **"That enrollment code is unknown or expired"** — request a fresh one.
-- **Asked to authorize again** — normal after a backend restart; paste the account token.
-- **Lost the account token** — it cannot be recovered. Ask for a new one; the old one should be
-  revoked.
+- Setup: https://dirhp.io/get-started
+- Help: https://dirhp.io/help
+- Privacy: https://api.dirhp.io/privacy
+- Terms: https://api.dirhp.io/terms/pilot
+- Support: help@dirhp.io
