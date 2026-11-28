@@ -1,6 +1,6 @@
 {
   "name": "dirhp",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "description": "dirhp skill bridge for spatial-semantic reasoning over live Rhino documents.",
   "author": {
     "name": "dirhp"
