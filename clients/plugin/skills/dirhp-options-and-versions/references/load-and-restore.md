@@ -52,7 +52,7 @@ Then call again with the same `modes`, that `review_token` and `resolutions` = `
 for every item, exactly as the designer chose. Items of kind `overlap` (both sides' changed objects touching or within the
 workspace's `overlap_tolerance`) are warnings: show them; left out they keep both, or the designer keeps one side
 (`"mine"` / `"theirs"` in `resolutions`). Never resolve an item or pick an overlap side yourself. `review_stale`: review again.
-`recipe_changed_both_sides`: combine cannot keep both; offer `replace` or saving first. `units_differ`: the latest save came from a document in other units; nothing changed (units are not converted yet). A combined copy stays unsaved (`save_required`)
+`recipe_changed_both_sides`: combine cannot keep both; offer `replace` or saving first. `units_differ`: the latest save is in other units than the copy (saved before copies were converted); nothing changed. A combined copy stays unsaved (`save_required`)
 on top of the latest save. The whole Update is one Rhino undo step (Ctrl+Z undoes every copy it moved), like the panel's Update. Before a combine, tell the designer its limits
 (whole-object conflicts, the overlap check's cap, possible duplicates after explode/join): `dirhp_get_guide(slug="options-and-versions", sections=["Combine: known limits"])`.
 Result has `pulled`, `skipped` (left alone, with reason) and `failed`. All or nothing: an error or stop puts every copy back (`state: rolled_back`, others `failed` `rolled_back`; rerun moves all). `rollback_unconfirmed`: designer checks the model first (one Ctrl+Z puts it back); do not rerun.

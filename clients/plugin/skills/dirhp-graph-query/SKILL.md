@@ -19,6 +19,8 @@ description: Find, count, filter, and relate existing dirhp records and properti
    `nodes`, `edges`, and `node_keys`. Scope every query; join on `graph_id` plus node/endpoint IDs.
    Use exact model keys. Count/group/sample unknown-size sets; select only needed columns.
    For versions use literal `'saved:<version_id>'` (maximum 20), not computed strings.
+   Content across many saved versions (Rhino only): `dirhp_list_versions(workspace, kind="rhino", latest_per_option=true, ...)`
+   for ids (follow `next_cursor`), then query them 20 literals at a time.
 4. Page with deterministic `ORDER BY`, unchanged SQL, and `next_cursor`. Restart on
    `graph_changed`/`invalid_cursor`. Check `partial`, unavailable graphs, warnings, and truncation.
    `pending_nested_options` omits unsaved children even when `partial=false`; report their

@@ -3,7 +3,7 @@
   "name": "dirhp",
   "license": "LicenseRef-Proprietary",
   "displayName": "dirhp plugin",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "dirhp skill bridge: spatial-semantic reasoning tools and modeling playbooks over a live Rhino document, plus human-in-the-loop prompts (text input, object selection) in Rhino.",
   "privacyPolicyUrl": "https://api.dirhp.io/privacy",
   "author": { "name": "dirhp" },
